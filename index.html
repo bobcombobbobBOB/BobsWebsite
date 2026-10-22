@@ -10,7 +10,16 @@
             color: #ffffff;
             margin: 40px;
         }
-        
+        /* pls lev */
+        /* pls lev */
+        /* pls lev */
+        /* pls lev */
+        /* pls lev */
+        /* pls lev */
+        /* pls lev */
+        /* pls lev */
+        /*pls don't go to cebastians.site/bob.html*/
+        /* pls lev */
         /* linkysssagain */
         .links-container {
             text-align: left;
@@ -86,7 +95,7 @@
 
     <!-- discord spamer -->
     <div style="margin-top: 10px;">
-        <input type="text" id="user-msg" class="text-box" maxlength="200" placeholder="Type a message (max 200 chars)...">
+        <input type="text" id="user-msg" class="text-box" maxlength="200" placeholder="send a message to the void (max 200 chars)...">
         <button class="check-btn" onclick="sendDiscordWebhook()">✓</button>
     </div>
 
@@ -97,7 +106,7 @@
             clickCount++;
             document.title = `bobs asom website (${clickCount})`;
         }
-
+   
         function sendDiscordWebhook() {
             const msg = document.getElementById('user-msg').value;
             if (!msg.trim()) {
@@ -118,15 +127,15 @@
             })
             .then(response => {
                 if (response.ok) {
-                    alert('Sent to Discord successfully!');
+                    alert('sent to the void :)');
                     document.getElementById('user-msg').value = '';
                 } else {
-                    alert('Failed to send message.');
+                    alert('i destoryed it srry');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Error sending message.');
+                alert('idk what happend srry vro');
             });
         }
     </script>
