@@ -93,7 +93,7 @@
 
     <br>
 
-    <!-- discord spamer -->
+    <!-- sends it to the void -->
     <div style="margin-top: 10px;">
         <input type="text" id="user-msg" class="text-box" maxlength="200" placeholder="send a message to the void (max 200 chars)...">
         <button class="check-btn" onclick="sendDiscordWebhook()">✓</button>
@@ -110,7 +110,7 @@
         function sendDiscordWebhook() {
             const msg = document.getElementById('user-msg').value;
             if (!msg.trim()) {
-                alert('Type something first!');
+                alert('im not sendin nothin to the void');
                 return;
             }
 
@@ -130,12 +130,12 @@
                     alert('sent to the void :)');
                     document.getElementById('user-msg').value = '';
                 } else {
-                    alert('i destoryed it srry');
+                    alert('sent to the void :)');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('idk what happend srry vro');
+                alert('sent to the void :)');
             });
         }
     </script>
