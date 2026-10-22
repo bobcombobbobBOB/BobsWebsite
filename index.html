@@ -112,7 +112,7 @@
             if (!msg.trim()) {
                 alert('im not sendin nothin to the void');
                 return;
-            if (formattedMsg.startsWith("BOB:")) {
+            if (msg.trim().startsWith("BOB:")) {
                 msg.trim() += " wishes to not be sent";
             }
 
