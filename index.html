@@ -43,34 +43,6 @@
             background-color: #555;
             transform: scale(1.05);
         }
-
-        /* sharp cube filled with text */
-        .text-box {
-            width: 240px;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #555;
-            background-color: #222;
-            color: #fff;
-            font-size: 14px;
-            outline: none;
-        }
-
-        /* charkmork button */
-        .check-btn {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 14px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-left: 5px;
-            transition: 0.2s;
-        }
-        .check-btn:hover {
-            background-color: #218838;
-        }
     </style>
 </head>
 <body>
@@ -91,57 +63,12 @@
         <div><a href="https://cebastians.site" class="oval-btn">index</a></div>
     </div>
 
-    <br>
-
-    <!-- sends it to the void -->
-    <div style="margin-top: 10px;">
-        <input type="text" id="user-msg" class="text-box" maxlength="200" placeholder="send a message to the void (max 200 chars, also disclamer: the void is a discord bot if you wish for it to not be sent type BOB: at the start but this only tells me you wish for it to not be sent, if you don't want it to be sent frfr then don't send it frfr)...">
-        <button class="check-btn" onclick="sendDiscordWebhook()">✓</button>
-    </div>
-
     <script>
         let clickCount = 0;
 
         function incrementClicks() {
             clickCount++;
             document.title = `bobs asom website (${clickCount})`;
-        }
-   
-        function sendDiscordWebhook() {
-            let rawMsg = document.getElementById('user-msg').value;
-            if (!rawMsg.trim()) {
-                alert('im not sendin nothin to the void');
-                return; // <-- Fixed: Added missing closing bracket here
-            }
-
-            let msg = rawMsg.trim();
-            if (msg.startsWith("BOB:")) {
-                msg += " wishes to not be sent";
-            }
-
-            const webhookUrl = 'https://discord.com/api/webhooks/1562637149285785612/t3d3Lh2KF_143I6bavdn7AwlWnlxc_Nc6QZCsxZDd2XEMKjZuO22N8xl9ThZ7nRdLOrT';
-            
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    content: msg
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('sent to the void :)');
-                    document.getElementById('user-msg').value = '';
-                } else {
-                    alert('sent to the void :)');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('sent to the void :)');
-            });
         }
     </script>
 
