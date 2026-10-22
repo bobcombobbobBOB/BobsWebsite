@@ -95,7 +95,7 @@
 
     <!-- sends it to the void -->
     <div style="margin-top: 10px;">
-        <input type="text" id="user-msg" class="text-box" maxlength="200" placeholder="send a message to the void (max 200 chars)...">
+        <input type="text" id="user-msg" class="text-box" maxlength="200" placeholder="send a message to the void (max 200 chars, also disclamer: the void is a discord bot if you wish for it to not be sent type BOB: at the start but this only tells me you wish for it to not be sent, if you don't want it to be sent frfr then don't send it frfr)...">
         <button class="check-btn" onclick="sendDiscordWebhook()">✓</button>
     </div>
 
@@ -112,6 +112,8 @@
             if (!msg.trim()) {
                 alert('im not sendin nothin to the void');
                 return;
+            if (formattedMsg.startsWith("BOB:")) {
+                msg.trim() += " wishes to not be sent";
             }
 
             const webhookUrl = 'https://discord.com/api/webhooks/1562637149285785612/t3d3Lh2KF_143I6bavdn7AwlWnlxc_Nc6QZCsxZDd2XEMKjZuO22N8xl9ThZ7nRdLOrT';
