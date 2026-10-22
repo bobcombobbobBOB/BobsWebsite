@@ -1,9 +1,88 @@
-<p style="text-align: center;">welcome to my asom site :]</p>
-<div style="text-align: center; margin: 20px 0;">
-  <img src="main.png" alt="Main Image" style="max-width: 100%; height: auto;">
-</div>
-<a href="https://cebastians.site" class="btn">index</a>
-<br>
-<a href="https://cebastians.site" class="btn">index</a>
-<br>
-<a href="https://cebastians.site" class="btn">index</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[insert website title](66)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: #ffffff;
+            margin-top: 40px;
+        }
+        /* pill buttons */
+        .oval-btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 30px;
+            margin: 8px 0;
+            border-radius: 50px; 
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #555;
+            transition: 0.2s;
+        }
+        .oval-btn:hover {
+            background-color: #555;
+        }
+        /* Rounded cube box of text */
+        .text-box {
+            width: 240px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #555;
+            background-color: #222;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+        /* checkmork buton */
+        .check-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 5px;
+            transition: 0.2s;
+        }
+        .check-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <p>welcome to my asom site :]</p>
+
+    <!-- my cool image-->
+    <div style="margin: 20px 0;">
+      <img src="main.png" alt="Main Image" style="max-width: 100%; height: auto;">
+    </div>
+
+    <!-- my cool links -->
+    <div><a href="https://cebastians.site" class="oval-btn">index</a></div>
+    <div><a href="https://cebastians.site" class="oval-btn">index</a></div>
+    <div><a href="https://cebastians.site" class="oval-btn">index</a></div>
+
+    <br>
+
+    <!-- my cool emailer -->
+    <div style="margin-top: 10px;">
+        <input type="text" id="user-msg" class="text-box" maxlength="200" placeholder="Type a message (max 200 chars)...">
+        <button class="check-btn" onclick="sendGmail()">✓</button>
+    </div>
+
+    <script>
+        function sendGmail() {
+            const msg = document.getElementById('user-msg').value;
+            window.location.href = `mailto:cebastian4444@gmail.com?subject=Message from my site&body=${encodeURIComponent(msg)}`;
+        }
+    </script>
+
+</body>
+</html>
