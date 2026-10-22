@@ -108,12 +108,15 @@
         }
    
         function sendDiscordWebhook() {
-            const msg = document.getElementById('user-msg').value;
-            if (!msg.trim()) {
+            let rawMsg = document.getElementById('user-msg').value;
+            if (!rawMsg.trim()) {
                 alert('im not sendin nothin to the void');
-                return;
-            if (msg.trim().startsWith("BOB:")) {
-                msg.trim() += " wishes to not be sent";
+                return; // <-- Fixed: Added missing closing bracket here
+            }
+
+            let msg = rawMsg.trim();
+            if (msg.startsWith("BOB:")) {
+                msg += " wishes to not be sent";
             }
 
             const webhookUrl = 'https://discord.com/api/webhooks/1562637149285785612/t3d3Lh2KF_143I6bavdn7AwlWnlxc_Nc6QZCsxZDd2XEMKjZuO22N8xl9ThZ7nRdLOrT';
